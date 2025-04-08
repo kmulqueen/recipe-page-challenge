@@ -39,6 +39,96 @@
   box-sizing: border-box;
 }
 
+.image {
+  width: 100%;
+}
+
+.recipe {
+  padding: 0 1.6em;
+}
+
+.recipe-info {
+  padding: 2.4em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em;
+}
+
+.recipe-preparation-time {
+  background-color: var(--color-rose-50);
+  padding: 1.6em;
+}
+
+.recipe-ingredients,
+.recipe-instructions,
+.recipe-nutrition {
+  padding: 2.4em 0;
+}
+
+.recipe-ingredients,
+.recipe-instructions {
+  position: relative;
+}
+
+section > h2 {
+  margin-bottom: 0.5em;
+}
+
+ul {
+  list-style: square inside;
+  margin-left: 0.5em;
+}
+
+ul > li::before {
+  content: "";
+  margin-left: 1.4em;
+}
+
+ul > li,
+ol > li {
+  margin-bottom: 0.5em;
+}
+
+ol {
+  padding-left: 1.5em;
+  counter-reset: item; /* Set up custom counter */
+}
+
+ol > li {
+  position: relative;
+  padding-left: 1.4em; /* Space between number and text */
+  list-style-type: none; /* Remove default numbers. Will be replaced by content in ::before pseudo-element */
+}
+
+ol > li::before {
+  content: counter(item) "."; /* Add custom numbers with period */
+  counter-increment: item;
+  position: absolute;
+  left: -1.5em; /* Position the number */
+  text-align: right;
+  width: 1.5em; /* Give enough width for the number */
+}
+
+hr {
+  border: thin solid var(--color-stone-150);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+}
+
+.nutrition-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: thin solid var(--color-stone-150);
+  padding: 1em 2em;
+}
+
+footer {
+  padding: 1em;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
