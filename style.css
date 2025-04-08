@@ -44,7 +44,22 @@
 }
 
 .recipe {
-  padding: 0 1.6em;
+  padding: 0 2.4em;
+}
+
+.recipe-title {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-size: 3rem;
+  color: var(--color-stone-900);
+}
+
+.recipe-description {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  color: var(--color-stone-600);
+  line-height: 150%;
+  font-size: 1.5rem;
 }
 
 .recipe-info {
@@ -57,6 +72,16 @@
 .recipe-preparation-time {
   background-color: var(--color-rose-50);
   padding: 1.6em;
+  font-family: "Outfit", sans-serif;
+  color: var(--color-stone-600);
+  font-size: 1.5rem;
+  border-radius: 1rem;
+}
+
+.recipe-preparation-time > h2 {
+  color: var(--color-rose-800);
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .recipe-ingredients,
@@ -65,9 +90,23 @@
   padding: 2.4em 0;
 }
 
+.recipe-ingredients > h2,
+.recipe-instructions > h2,
+.recipe-nutrition > h2 {
+  font-family: "Young Serif", serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: var(--color-brown-800);
+}
+
 .recipe-ingredients,
-.recipe-instructions {
+.recipe-instructions,
+.recipe-nutrition {
   position: relative;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5rem;
+  color: var(--color-stone-600);
+  line-height: 150%;
 }
 
 section > h2 {
@@ -75,13 +114,19 @@ section > h2 {
 }
 
 ul {
-  list-style: square inside;
-  margin-left: 0.5em;
+  list-style: square;
+  padding-left: 1.5em;
 }
 
-ul > li::before {
-  content: "";
-  margin-left: 1.4em;
+ul > li {
+  margin-bottom: 0.5em;
+  position: relative;
+  padding-left: 1.4em;
+}
+
+ul > li::marker {
+  color: var(--color-brown-800);
+  font-size: 0.6em;
 }
 
 ul > li,
@@ -107,6 +152,8 @@ ol > li::before {
   left: -1.5em; /* Position the number */
   text-align: right;
   width: 1.5em; /* Give enough width for the number */
+  color: var(--color-brown-800);
+  font-weight: 600;
 }
 
 hr {
@@ -121,12 +168,21 @@ hr {
 .nutrition-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border-bottom: thin solid var(--color-stone-150);
   padding: 1em 2em;
+}
+
+.nutrition-item:not(:last-child) {
+  border-bottom: thin solid var(--color-stone-150);
+}
+
+dd > b {
+  color: var(--color-brown-800);
 }
 
 footer {
   padding: 1em;
+  font-family: "Outfit", sans-serif;
+  color: var(--color-stone-600);
 }
 
 .attribution {
